@@ -1,0 +1,12 @@
+# generic python exclusions
+__pycache__
+.pytest_cache
+*.egg-info
+.mypy_cache
+.pypirc
+# virtual-fish venv file
+.venv
+# vscode prefs
+.vscode
+dist/
+*.code-workspace

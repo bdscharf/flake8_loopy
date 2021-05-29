@@ -1,0 +1,4 @@
+[flake8]
+# this project is formatted with black
+max-line-length = 88
+exclude = setup.py
