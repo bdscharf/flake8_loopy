@@ -67,3 +67,17 @@ for i, row in enumerate(table):
 """
     )
     assert ret == {"3:4 LPY100 variable 'c_idx' created by enumerate() is not used"}
+
+
+def test_underscore_allowed():
+    assert (
+        _results(
+            """
+table = ["Row 1", "Row 2"]
+for i, _ in enumerate(table):
+    print(i)
+print("Loop ended.")
+"""
+        )
+        == set()
+    )

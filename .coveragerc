@@ -1,0 +1,6 @@
+[run]
+source=flake8_loopy
+
+[report]
+omit = tests/*
+show_missing = True

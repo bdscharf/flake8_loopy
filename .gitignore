@@ -4,6 +4,7 @@ __pycache__
 *.egg-info
 .mypy_cache
 .pypirc
+.coverage
 # virtual-fish venv file
 .venv
 # vscode prefs
