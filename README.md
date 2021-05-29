@@ -3,6 +3,8 @@
 
 basic code quality checks in loops
 
+```pip install flake8_loopy```
+
 ## checks
 | error code      | description |
 | ----------- | ----------- |
