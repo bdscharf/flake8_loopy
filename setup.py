@@ -31,7 +31,13 @@ setup(
         "Topic :: Software Development :: Quality Assurance",
     ],
     keywords="flake8",
-    py_modules=["flake8_loopy"],
+    py_modules=[
+        "flake8_loopy",
+        "flake8_loopy.defs",
+        "flake8_loopy.defs",
+        "flake8_loopy.visitor",
+        "flake8_loopy.error_codes",
+    ],
     install_requires=["flake8>=3.0.0"],
     entry_points={"flake8.extension": ["LPY = flake8_loopy:LoopyPlugin"]},
 )
