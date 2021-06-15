@@ -2,5 +2,5 @@
 source=flake8_loopy
 
 [report]
-omit = tests/*
+omit = tests/*,setup.py
 show_missing = True

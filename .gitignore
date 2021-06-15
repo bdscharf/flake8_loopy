@@ -5,6 +5,7 @@ __pycache__
 .mypy_cache
 .pypirc
 .coverage
+build/
 # virtual-fish venv file
 .venv
 # vscode prefs

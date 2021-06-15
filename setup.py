@@ -2,7 +2,7 @@
 
 from setuptools import setup
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 setup(
     name="flake8_loopy",
@@ -33,7 +33,6 @@ setup(
     keywords="flake8",
     py_modules=[
         "flake8_loopy",
-        "flake8_loopy.defs",
         "flake8_loopy.defs",
         "flake8_loopy.visitor",
         "flake8_loopy.error_codes",

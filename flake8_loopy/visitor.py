@@ -22,6 +22,7 @@ class Visitor(ast.NodeVisitor):
             isinstance(node.target, ast.Tuple)
             and node.target.elts
             and isinstance(node.iter, ast.Call)
+            and isinstance(node.iter.func, ast.Name)
             and node.iter.func.id == "enumerate"  # type: ignore
         )
         if has_enumerate:
