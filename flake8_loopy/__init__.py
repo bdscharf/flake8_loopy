@@ -22,7 +22,7 @@ class LoopyPlugin:
         visitor = Visitor()
         visitor.visit(self._tree)
         # Write errors for unused variables
-        for line, col, code, unused in visitor.unused_errors:
+        for line, col, code, unused in visitor.errors:
             msg = f"LPY{code} {ERROR_CODES[code].format(var=unused)}"
             yield line, col, msg, type(self)
 

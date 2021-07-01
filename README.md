@@ -9,12 +9,11 @@ basic code quality checks in loops
 | error code      | description |
 | ----------- | ----------- |
 | LPY100      | unused variable created by ```enumerate()```: you probably do not need ```enumerate()```, or you should use ```range(len())``` instead      |
+| LPY101      | variable created by for loop shadows a variable in its outer context                                                                        |
 
-## todo
-1) check for duplicated variable name in inner loop(s)
-
-2) iteration with index where index is only used to get an item (should iterate directly over items)
+## future
+- iteration with index where index is only used to get an item (should iterate directly over items)
 
 
 ## notes
-this plugin is currently mostly untested and should be considered experimental. please report false positives / errors if found!
+please report false positives / errors if found! contributions welcome.

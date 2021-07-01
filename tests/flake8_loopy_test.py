@@ -81,3 +81,50 @@ print("Loop ended.")
         )
         == set()
     )
+
+
+def test_var_is_shadowed():
+    ret = _results(
+        """
+i = "Hello there"
+table = ["Row 1", "Row 2"]
+for i in table:
+    print(i)
+print(i)
+"""
+    )
+    assert ret == {
+        "3:0 LPY101 variable 'i' created by for loop shadows another value in its context"
+    }
+
+
+def test_var_not_shadowed():
+    assert (
+        _results(
+            """
+j = "my message"
+table = ["Row 1", "Row 2"]
+for i in table:
+    i = "message"
+print(j)
+"""
+        )
+        == set()
+    )
+
+
+def test_nested_shadowing():
+    ret = _results(
+        """
+j = "my message"
+table = ["Row 1", "Row 2"]
+for i in table:
+    i = "message"
+    for j in table:
+        print(j)
+print(j)
+"""
+    )
+    assert ret == {
+        "5:4 LPY101 variable 'j' created by for loop shadows another value in its context"
+    }
